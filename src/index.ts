@@ -1,3 +1,7 @@
-app.listen(3000, () => {
-	console.log('Escuchando puerto 3000');
+import app from './app';
+import './database';
+
+app.listen(app.get('port'), () => {
+	console.log('Listening on port', app.get('port'));
 })
+
